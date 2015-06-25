@@ -1,5 +1,6 @@
 var Crypt   = require('./crypt').Crypt;
-var Message = ripple.Message;
+var sjclext = require('sjcl-extended');
+var Message = require('ripple-lib-messagesigner')(ripple, sjclext);
 var parser  = require("url");
 var extend  = require("extend");
 var querystring = require('querystring');
